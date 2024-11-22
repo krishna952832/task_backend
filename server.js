@@ -42,6 +42,10 @@ if (!fs.existsSync("uploads")) {
 }
 
 // Handle GET requests
+
+app.get("/", (req, res) => {
+    res.status(200).json({ message: "API is working" });
+  });
 app.get("/bfhl", (req, res) => {
   res.status(200).json({ operation_code: 1 });
 });
