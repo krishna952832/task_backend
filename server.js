@@ -117,7 +117,7 @@ app.post("/bfhl", upload.single("image"), (req, res) => {
       file_valid: !!file,
       file_mime_type: file ? file.mimetype : null,
       file_size_kb: file ? Math.ceil(file.size / 1024) : null,
-    //   file_path: file ? `/uploads/${file.filename}` : null, // Image path
+      file_path: file ? `/uploads/${file.filename}` : null, // Image path
     };
 
     res.json(response);
